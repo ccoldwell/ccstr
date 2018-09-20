@@ -28,7 +28,9 @@ libccstr.a: ccstr.c ccstr.h
 install: libccstr.a
 	@echo + installing string library
 	@cp libccstr.a $(LIB)/
+	@chmod a+r $(LIB)/libccstr.a
 	@cp ccstr.h $(INC)/
+	@chmod a+r $(INC)/ccstr.h
 	@ar rcs libccstr.a ccstr.o
 
 
